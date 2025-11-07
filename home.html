@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSeat App</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <h1 id="welcome"></h1>
+  <button id="logout">Logout</button>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      document.getElementById("welcome").innerText = `Hello, ${user.name}! Welcome to SmartSeat.`;
+    } else {
+      // Not logged in, redirect back to login
+      window.location.href = "index.html";
+    }
+
+    document.getElementById("logout").onclick = function() {
+      localStorage.removeItem("user"); // log out
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

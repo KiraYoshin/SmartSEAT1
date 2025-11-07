@@ -1,0 +1,32 @@
+   const user = JSON.parse(localStorage.getItem("user"));
+
+  if (user) {
+    document.getElementById("welcome").innerText =
+      `Hello, ${user.name}! Welcome to SmartSeat.`;
+
+    // create a countdown text under the welcome
+    let redirectText = document.createElement("p");
+    redirectText.id = "redirectText";
+    document.body.appendChild(redirectText);
+
+    let seconds = 3;
+    redirectText.innerText = `Redirecting in ${seconds}...`;
+
+    let countdown = setInterval(() => {
+      seconds--;
+      redirectText.innerText = `Redirecting in ${seconds}...`;
+
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.href = "dashboard.html";
+      }
+    }, 1000);
+
+  } else {
+    window.location.href = "index.html";
+  }
+
+  document.getElementById("logout").onclick = function() {
+    localStorage.removeItem("user");
+    window.location.href = "index.html";
+  }

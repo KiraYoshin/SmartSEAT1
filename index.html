@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SmartSeat Login</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="login-container">
+            <!-- LOGIN / SIGNUP BOX -->
+            <div class="form-box" id="loginBox">
+                <h1 id="title">Sign In</h1>
+
+                <div class="btn-itu">
+                    <button type="button" id="signinBtn" class="disable">Sign In</button>
+                    <button type="button" id="signupBtn">Sign Up</button>
+                </div>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" placeholder="Surname, First Name, Middle Initial" />
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Email" />
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Password" />
+                        </div>
+
+                        <div class="input-field" id="confirmPasswordField">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+                        </div>
+
+                        <p class="fp">Forgot Password? <a href="#" id="forgotLink">Click Here!</a></p>
+                    </div>
+
+                    <div class="btn-itu2">
+                        <button type="submit" id="submitBtn">Sign In</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box" id="forgotBox" style="display: none;">
+                <h1>Forgot Password</h1>
+
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="forgotEmail" placeholder="Enter your email" />
+                    </div>
+                </div>
+
+                <br />
+                <button id="forgotSubmit">Submit</button> <br><br>
+                <p><a href="index.html" id="backToLogin">Back to Login</a></p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,2 +1,1 @@
-# SmartSEAT1
-SmartSeat-UI
+# SmartSeat-log-in
